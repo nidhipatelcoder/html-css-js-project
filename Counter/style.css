@@ -1,0 +1,28 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+
+.counter-app {
+    text-align: center;
+    padding-top: 200px;
+    background-color: bisque;
+    border-radius: 10px;
+    height: 500px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+.buttons {
+    font-size: 20px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: aquamarine;
+}

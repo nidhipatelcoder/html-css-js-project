@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container-fluid">
+        <div class="row bg-danger">
+            <div class="col-12 text-center">
+                <h1>Todo App</h1>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-3">
+            <div class="col-4">
+                <div class="mb-3">
+
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter Todo">
+                    <button class="btn btn-success btn-lg float-end mt-3" id="green" onclick="addtodo()">Add
+                        Todo</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row justify-content-center mt-2">
+            <div class="col-4">
+                <ul class="list-group" id="list">
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+
+
+    <script>
+        let input = document.getElementById("exampleFormControlInput1");
+        let btn = document.getElementById("green");
+        let list = document.getElementById("list");
+        function addtodo(){
+            let v = input.value;
+            console.log(v);
+            let li = document.createElement("li");
+            li.setAttribute("class", "list-group-item");
+            li.innerHTML = v;
+
+            list.appendChild(li);
+            
+        }
+        
+
+    </script>
+</body>
+
+</html>

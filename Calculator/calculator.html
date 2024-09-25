@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: paleturquoise;
+        }
+
+        .box {
+            height: 820px;
+            width: 400px;
+            background-color: pink;
+            border: solid black;
+            position: relative;
+            left: 700px;
+            top: 60px;
+            box-shadow: 20px 20px 20px black;
+
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(6, 100px);
+            gap: 20px;
+            place-content: center;
+
+        }
+
+        .sbox {
+
+            height: 70px;
+            background-color: palevioletred;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 1px 5px 4px gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <input type="text" id="display" class="sbox"
+            style="grid-column: 1/4;background-color: lightgray; margin-top: 10px;">
+        <button class="sbox" onclick="pressc()" style="background-color: lightgoldenrodyellow;">C</button>
+        <button class="sbox" onclick="press1()">1</button>
+        <button class="sbox" onclick="press2()">2</button>
+        <button class="sbox" onclick="press3()">3</button>
+        <button class="sbox" onclick="press4()">4</button>
+        <button class="sbox" onclick="press5()">5</button>
+        <button class="sbox" onclick="press6()">6</button>
+        <button class="sbox" onclick="press7()">7</button>
+        <button class="sbox" onclick="press8()">8</button>
+        <button class="sbox" onclick="press9()">9</button>
+        <button class="sbox" onclick="press0()">0</button>
+        <button class="sbox" onclick="press00()">00</button>
+        <button class="sbox" onclick="pressequal()"
+            style="background-color: palevioletred; grid-column: 1/3; align-items: center;">=</button>
+        <!-- <button class="sbox" onclick="press00()">00</button> -->
+        <button class="sbox" onclick="pressadd()"
+            style="background-color: palevioletred; grid-column: 3/4; align-items: center;">+</button>
+        <button class="sbox" onclick="presssub()"
+            style="background-color: palevioletred; grid-column: 1/2; align-items: center;">-</button>
+        <button class="sbox" onclick="pressmul()"
+            style="background-color: palevioletred; grid-column: 2/2; align-items: center;">*</button>
+        <button class="sbox" onclick="pressdiv()"
+            style="background-color: palevioletred; grid-column: 3/4; align-items: center;">%</button>
+
+
+    </div>
+    <script>
+        let output = document.getElementById("display");
+
+        function pressc() {
+            output.value = ""
+        }
+
+        function press1() {
+            output.value += "1";
+        }
+        function press2() {
+            output.value += "2";
+        }
+        function press3() {
+            output.value += "3";
+        }
+        function press4() {
+            output.value += "4";
+        }
+        function press5() {
+            output.value += "5";
+        }
+        function press6() {
+            output.value += "6";
+        }
+        function press7() {
+            output.value += "7";
+        }
+        function press8() {
+            output.value += "8";
+        }
+        function press9() {
+            output.value += "9";
+        }
+        function press0() {
+            output.value += "0";
+        }
+        function press00() {
+            output.value += "00";
+        }
+        function pressequal() {
+
+            let temp = output.value;
+
+            let ans = eval(temp)
+
+
+            output.value = ans;
+        }
+        function pressadd() {
+            output.value += "+";
+        }
+        function presssub() {
+            output.value += "-";
+        }
+        function pressmul() {
+            output.value += "*";
+        }
+        function pressdiv() {
+            output.value += "%";
+        }
+
+
+    </script>
+</body>
+
+</html>

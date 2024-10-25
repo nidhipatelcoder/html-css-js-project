@@ -1,0 +1,61 @@
+:root{
+    --board-size:550px;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 450px;
+}
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.border{
+    width: var(--board-size);
+    height: var(--board-size);
+    border-radius: 10px;
+    overflow: hidden;
+}
+.row{
+    width: 100%;
+    height:calc(var(--board-size) /7);
+    box-shadow: inset 0 0 10px rgba(0,0, 0, 0.5);
+    padding: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#row1{
+    background-color: red;
+
+}
+#row2{
+    background-color: orangered;
+}
+#row3{
+    background-color: yellow;
+}
+#row4{
+    background-color: green;
+}
+#row5{
+    background-color: blue;
+}
+#row6{
+    background-color: purple;
+}
+.pop{
+    width: calc(var(--board-size) /6 - 16px);
+    height: calc(var(--board-size) /6 - 16px);
+    border-radius: 50%;
+    box-shadow: inset 0 0 10px rgba(0,0, 0, 0.5);
+    cursor: pointer;
+}
+
+
+.active{
+    box-shadow: inset 0 0 40px rgba(0,0, 0, 0.5);
+}
